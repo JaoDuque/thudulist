@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:thudulist/pages/layouts/bodyLayouts/card_custom.dart';
+import 'package:thudulist/pages/layouts/text_form.dart';
 
 class CustomBody extends StatefulWidget {
   const CustomBody({super.key});
@@ -10,8 +12,14 @@ class CustomBody extends StatefulWidget {
 class _CustomBodyState extends State<CustomBody> {
   @override
   Widget build(BuildContext context) {
+
     return const Scaffold(
-      body: Text('sre'),
+      body:TabBarView(
+       children: <Widget>[
+        TextForm(),
+        CardCustom(),
+      ]
+      )
     );
   }
 }

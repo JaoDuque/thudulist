@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:thudulist/pages/layouts/custom_body.dart';
 
 List<String> titles = <String>[
   'To Do',
@@ -28,7 +29,9 @@ class _MyHomePageState extends State<MyHomePage> {
             title: Text(
               widget.title,
               style: const TextStyle(
-                  color: Colors.white, fontSize: 40, fontFamily: 'cursive'),
+                  color: Colors.white,
+                  fontSize: 40, 
+                   fontFamily: 'cursive'),
             ),
             centerTitle: true,
             bottom: TabBar(
@@ -46,6 +49,7 @@ class _MyHomePageState extends State<MyHomePage> {
               ],
             ),
           ),
-        ));
+          body: CustomBody(),
+          ));
   }
 }
